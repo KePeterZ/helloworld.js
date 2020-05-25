@@ -12,6 +12,11 @@ app.get('/', (req, res) => {
   res.render('index');
 });
 
+app.post('/post', (req, res) => {
+  res.end(res.toString())
+  console.log(res.toString())
+})
+
 app.use((req, res) => {
   res.redirect("/");
 });
